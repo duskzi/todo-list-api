@@ -2,6 +2,8 @@
 ---
 Servidor API feito como atividade avaliativa da matéria PW II
 
+VÍDEO DO PROJETO [https://youtu.be/rzpcUiz7N8I]
+
 ### Tecnologias Utilizadas
 O projeto é desenvolvido na linguagem **JavaScript**, utilizando o interpretador e biblioteca **Node.js**
 Durante o desenvolvimento, **cURL**, ferramenta de terminal utilizada para enviar requisições, além de usar o navegador **Firefox**(muito melhor que o chrome) para testar requisições mais completas. 
