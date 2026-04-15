@@ -1,5 +1,4 @@
 # API de Tarefas com Node.js
----
 Servidor API feito como atividade avaliativa da matéria PW II
 
 VÍDEO DO PROJETO [https://youtu.be/rzpcUiz7N8I]
