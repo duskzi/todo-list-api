@@ -60,6 +60,23 @@ async (req, res, id) => {
     res.end(JSON.stringify(task));
 }
 
+// Edit status
+const status_task =
+async (req, res, id) => {
+    
+    const body = await get_request_body(req);
+    const task = task_service.status_task(id, body.completed);
+
+    // Handling if task not found
+    if(!task){
+        res.statusCode = 404;
+        return res.end(JSON.stringify({message: "Not found"}));
+    };
+
+    // Task updated
+    res.end(JSON.stringify(task));
+}
+
 // Delete task
 const delete_task =
 (req, res, id) => {
@@ -78,5 +95,6 @@ export {
     create_task,
     list_tasks,
     update_task,
+    status_task,
     delete_task
 };

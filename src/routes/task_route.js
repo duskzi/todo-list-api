@@ -19,17 +19,21 @@ const task_route = (req, res) => {
         return task_controller.create_task(req, res);
     }
 
-    // PUT /tasks/id
-    if(url.startsWith("/tasks/") && method === "PUT"){
+    // PUT /tasks/:id/status
+    if (url.startsWith("/tasks/") && url.endsWith("/status") && method === "PUT"){
 
-        //    task / id
-        // url[2] -> id
         const id = url.split("/")[2];
+        return task_controller.status_task(req, res, id);
+    }
 
+    // PUT /tasks/:id
+    if (url.startsWith("/tasks/") && method === "PUT"){
+
+        const id = url.split("/")[2];
         return task_controller.update_task(req, res, id);
     }
 
-    // DELETE /tasks/id
+    // DELETE /tasks/:id
     if(url.startsWith("/tasks/") && method === "DELETE"){
 
         const id = url.split("/")[2];
